@@ -1,13 +1,13 @@
 import './styles.css';
-import FlatPicker from 'react-flatpickr';
-import flatPickerLib from 'flatpickr';
-import { Portuguese } from 'flatpickr/dist/l10n/pt';
 import 'flatpickr/dist/themes/material_green.css';
+import flatpickrLib from 'flatpickr';
+import { Portuguese } from 'flatpickr/dist/l10n/pt';
+import FlatPicker from 'react-flatpickr';
 
-flatPickerLib.localize(Portuguese);
+flatpickrLib.localize(Portuguese);
 
 const Filter = () => {
-  const onchangeDate = (dates: Date[]) => {
+  const onChangeDate = (dates: Date[]) => {
     console.log(dates);
   };
 
@@ -16,12 +16,12 @@ const Filter = () => {
       <FlatPicker
         options={{
           mode: 'range',
-          dateFormat: 'd/m/y',
+          dateFormat: 'd/m/Y',
           showMonths: 2
         }}
         className="filter-input"
-        onChange={onchangeDate}
-        placeholder="Selecione um periodo"
+        onChange={onChangeDate}
+        placeholder="Selecione um período"
       />
       <select className="filter-input">
         <option value="">Selecione um gênero</option>
