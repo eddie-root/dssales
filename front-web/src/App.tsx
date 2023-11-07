@@ -4,6 +4,7 @@ import Header from './components/Header';
 import PieChartCard from './components/Pie-Chart-Card';
 import SalesByDate from './components/Sales-By-Date';
 import SalesSummary from './components/Sales-Summary';
+import SalesTable from './components/sales-table';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             series={[20, 50, 30]}
           />
         </div>
+        <SalesTable />
       </div>
     </>
   );
