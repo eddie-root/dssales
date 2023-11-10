@@ -1,11 +1,11 @@
 .pie-chart-card {
-  width: 30%;
+  width: 28%;
   padding-top: 35px;
   display: flex;
   justify-content: center;
 }
 
-.apexcharts-legend.apexcharts-aling-center {
-  flex-direction: column;
+.apexcharts-legend.apexcharts-align-center {
+  flex-direction: column !important;
   align-items: center;
 }
