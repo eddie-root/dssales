@@ -8,6 +8,12 @@ type Props = {
   filterData?: FilterData;
 };
 
+// const extraParams = {
+//   page: 0,
+//   size: 12,
+//   sort: 'date, desc'
+// };
+
 const SalesTable = ({ filterData }: Props) => {
   const [sales, setSales] = useState<Sale[]>([]);
 
