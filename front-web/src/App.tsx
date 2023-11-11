@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from 'react';
 import './App.css';
+import { useEffect, useMemo, useState } from 'react';
 import Filter from './components/Filter';
 import Header from './components/Header';
 import PieChartCard from './components/Pie-Chart-Card';
@@ -25,7 +25,7 @@ function App() {
         setSalesByStore(newSalesByStore);
       })
       .catch(() => {
-        console.log('Error to fetch sales by date');
+        console.log('Error to fetch sales by store');
       });
   }, [params]);
 
@@ -37,7 +37,7 @@ function App() {
         setSalesByPaymentMethod(newSalesByPaymentMethod);
       })
       .catch(() => {
-        console.log('Error to fetch sales by date');
+        console.log('Error to fetch sales by payment method');
       });
   }, [params]);
 
@@ -61,7 +61,7 @@ function App() {
             series={salesByPaymentMethod?.series}
           />
         </div>
-        <SalesTable />
+        <SalesTable filterData={filterData} />
       </div>
     </>
   );
